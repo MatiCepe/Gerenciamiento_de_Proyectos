@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DDC2ADB-9894-4F78-9D13-999F87889F99}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WFapp</RootNamespace>
+    <AssemblyName>WFapp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.Entity.EF6.6.8.3\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF5">
+      <HintPath>..\packages\MySql.Data.Entity.EF6.6.8.3\lib\net45\MySql.Data.Entity.EF5.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6">
+      <HintPath>..\packages\MySql.Data.Entity.EF6.6.8.3\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmFactorEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFactorEditar.Designer.cs">
+      <DependentUpon>frmFactorEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFactorListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFactorListar.Designer.cs">
+      <DependentUpon>frmFactorListar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmValorEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValorEditar.Designer.cs">
+      <DependentUpon>frmValorEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmValorListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValorListar.Designer.cs">
+      <DependentUpon>frmValorListar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmFactorEditar.resx">
+      <DependentUpon>frmFactorEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFactorListar.resx">
+      <DependentUpon>frmFactorListar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValorEditar.resx">
+      <DependentUpon>frmValorEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValorListar.resx">
+      <DependentUpon>frmValorListar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GP.DTO\GP.DTO.csproj">
+      <Project>{FA5F57D1-DE99-44F5-B847-3883044C119A}</Project>
+      <Name>GP.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GP.Gestores\GP.Gestores.csproj">
+      <Project>{F4BFE469-9C07-4E60-BB7A-D1CB984018F5}</Project>
+      <Name>GP.Gestores</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GP.MVP\GP.MVP.csproj">
+      <Project>{79614C7B-92F9-4A9E-B915-2682DF891FD0}</Project>
+      <Name>GP.MVP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
