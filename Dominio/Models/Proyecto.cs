@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Dominio.Models
+namespace GP.Dominio.Models
 {
     public class Proyecto : BaseModel
     {

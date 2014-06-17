@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using Dominio.Models;
-using Repositorio.Interfaces;
+using GP.Dominio.Models;
+using GP.Repositorio.Interfaces;
 
-namespace Repositorio.Repositories
+namespace GP.Repositorio.Repositories
 {
     public class GerenteRepository : BaseRepository<Gerente>, IGerenteRepository
     {

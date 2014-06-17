@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.Entity;
-using Dominio;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Dominio.Models;
+using GP.Dominio.Models;
 
-
-namespace AccesoaDatos
+namespace GP.AccesoaDatos
 {
     public class GerenciamientoProyectosContext : DbContext
     {

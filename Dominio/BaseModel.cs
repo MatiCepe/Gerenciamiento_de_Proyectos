@@ -1,5 +1,5 @@
 ﻿
-namespace Dominio
+namespace GP.Dominio
 {
     public abstract class BaseModel
     {

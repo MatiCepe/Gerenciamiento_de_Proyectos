@@ -2,12 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using AccesoaDatos;
-using Dominio.Models;
+using GP.AccesoaDatos;
 using GP.DTO.DTO;
+using GP.Dominio.Models;
+using GP.Repositorio.Repositories;
 using Log;
-using Repositorio.Repositories;
-using System.Linq;
 
 namespace GP.Gestores.Gestores
 {

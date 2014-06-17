@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Dominio;
-using Dominio.Models;
-using Repositorio;
-using AccesoaDatos;
+using GP.Dominio.Models;
+using GP.Repositorio.Repositories;
 using Log;
-using Repositorio.Repositories;
 
 namespace SystemTest
 {

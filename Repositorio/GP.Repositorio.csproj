@@ -7,8 +7,8 @@
     <ProjectGuid>{DE5CEF32-8C0C-46B0-86BA-FEA2066D050C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Repositorio</RootNamespace>
-    <AssemblyName>Repositorio</AssemblyName>
+    <RootNamespace>GP.Repositorio</RootNamespace>
+    <AssemblyName>GP.Repositorio</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

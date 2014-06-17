@@ -1,5 +1,5 @@
 ﻿
-namespace Dominio.Models
+namespace GP.Dominio.Models
 {
     public class Gerente : BaseModel
     {

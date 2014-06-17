@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Data.Entity;
-using AccesoaDatos;
-using Dominio;
+using GP.AccesoaDatos;
+using GP.Dominio;
+using GP.Repositorio.Interfaces;
 using Log;
-using Repositorio.Interfaces;
 
-namespace Repositorio
+namespace GP.Repositorio
 {
     public abstract class BaseRepository<T> : IRepository<T> 
         where T : BaseModel

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Dominio.Models;
 using GP.DTO.DTO;
+using GP.Dominio.Models;
+using GP.Repositorio.Repositories;
 using Log;
-using Repositorio.Repositories;
 
 namespace GP.Gestores.Gestores
 {

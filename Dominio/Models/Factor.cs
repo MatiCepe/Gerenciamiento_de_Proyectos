@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Dominio.Models
+namespace GP.Dominio.Models
 {
     public class Factor : BaseModel
     {

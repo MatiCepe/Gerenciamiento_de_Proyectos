@@ -7,8 +7,8 @@
     <ProjectGuid>{B87EF77F-FB88-4461-9D8F-6104C0C31040}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AccesoaDatos</RootNamespace>
-    <AssemblyName>AccesoaDatos</AssemblyName>
+    <RootNamespace>GP.AccesoaDatos</RootNamespace>
+    <AssemblyName>GP.AccesoaDatos</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

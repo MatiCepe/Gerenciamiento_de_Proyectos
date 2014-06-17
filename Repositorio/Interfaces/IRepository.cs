@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Dominio;
+using GP.Dominio;
 
-namespace Repositorio.Interfaces
+namespace GP.Repositorio.Interfaces
 {
     interface IRepository<T> 
         where T : BaseModel
