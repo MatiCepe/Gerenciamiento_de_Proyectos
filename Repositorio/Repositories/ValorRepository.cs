@@ -10,7 +10,6 @@ namespace GP.Repositorio.Repositories
         {
             return GerenciamientoProyectosContext.Set<Valor>()
                 .FirstOrDefault(x => x.ValorId == id);
-
         }
     }
 }

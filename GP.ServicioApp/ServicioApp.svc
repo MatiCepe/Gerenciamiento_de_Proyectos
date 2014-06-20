@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="GP.ServicioApp.ServicioValor" CodeBehind="ServicioApp.svc.cs" %>

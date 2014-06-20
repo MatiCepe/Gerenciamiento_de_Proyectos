@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Log
+namespace GP.Log
 {
     public class Logger
     {

@@ -5,8 +5,8 @@ using System.Text;
 using GP.AccesoaDatos;
 using GP.DTO.DTO;
 using GP.Dominio.Models;
+using GP.Log;
 using GP.Repositorio.Repositories;
-using Log;
 
 namespace GP.Gestores.Gestores
 {
@@ -67,8 +67,8 @@ namespace GP.Gestores.Gestores
                 }
                 else
                 {
-                    throw new Exception(isValid);
                     _log.WriteLog(isValid);
+                    throw new Exception(isValid);
                 }
             }
             catch (Exception e)

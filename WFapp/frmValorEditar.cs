@@ -3,27 +3,31 @@ using GP.Gestores.Gestores;
 using GP.MVP.Presenters;
 using GP.MVP.Views;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WFapp
+namespace GP.WFapp
 {
     public partial class frmValorEditar : Form, IValorEditarView
     {
         private readonly ValorEditarPresenter _editarPresenter;
-        public FrmValorListar frmValorListar;
+        private FrmValorListar _frmValorListar;
+        private Main _main;
 
-        public frmValorEditar(int valorId, FrmValorListar fvl)
+        public frmValorEditar(int valorId, FrmValorListar main)
+            : this(valorId)
+        {
+            _frmValorListar = main;
+        }
+
+        public frmValorEditar(int valorId, Main main) : this(valorId)
+        {
+            _main = main;
+        }
+
+        public frmValorEditar(int valorId)
         {
             _editarPresenter = new ValorEditarPresenter(this, new ValorGestor());
             _editarPresenter.ValorId = valorId;
-            this.frmValorListar = fvl;
             InitializeComponent();
         }
 
@@ -76,10 +80,14 @@ namespace WFapp
             {
                 MessageBox.Show("Existe un error al guardar");
             }
-            this.Close();
-            this.frmValorListar.Enabled = true;
-            this.frmValorListar.dataGridListaValoresRefresh();
+            this.Hide();
+            _frmValorListar.Show();
+        }
 
+        private void frmValorEditar_FormClosing(object sender, EventArgs e)
+        {
+            this.Hide();
+            _frmValorListar.Show();
         }
     }
 }

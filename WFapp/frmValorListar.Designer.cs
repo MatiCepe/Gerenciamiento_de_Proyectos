@@ -1,4 +1,4 @@
-﻿namespace WFapp
+﻿namespace GP.WFapp
 {
     partial class FrmValorListar
     {

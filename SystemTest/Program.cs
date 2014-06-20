@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using GP.Dominio.Models;
+using GP.Log;
 using GP.Repositorio.Repositories;
-using Log;
 
 namespace SystemTest
 {

@@ -1,4 +1,4 @@
-﻿namespace WFapp
+﻿namespace GP.WFapp
 {
     partial class frmValorEditar
     {
@@ -114,6 +114,7 @@
             this.Name = "frmValorEditar";
             this.Text = "frmValorEditar";
             this.Load += new System.EventHandler(this.frmValorEditar_Load);
+            this.Closed += new System.EventHandler(this.frmValorEditar_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

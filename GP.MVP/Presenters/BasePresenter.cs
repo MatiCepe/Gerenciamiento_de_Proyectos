@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GP.MVP.Views;
+﻿using GP.MVP.Views;
 
 namespace GP.MVP.Presenters
 {

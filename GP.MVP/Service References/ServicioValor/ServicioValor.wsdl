@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioValor" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7430/ServicioValor.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7430/ServicioValor.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7430/ServicioValor.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GP.ServicioBase.DataContracts" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioValor_Save_InputMessage">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_Save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_Edit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_Edit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_Enable_InputMessage">
+    <wsdl:part name="parameters" element="tns:Enable" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_Enable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_Disable_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disable" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_Disable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_ObtainId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtainId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_ObtainId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtainIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_ObtainAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtainAll" />
+  </wsdl:message>
+  <wsdl:message name="IServicioValor_ObtainAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtainAllResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioValor">
+    <wsdl:operation name="Save">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioValor/Save" message="tns:IServicioValor_Save_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioValor/SaveResponse" message="tns:IServicioValor_Save_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioValor/Edit" message="tns:IServicioValor_Edit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioValor/EditResponse" message="tns:IServicioValor_Edit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Enable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioValor/Enable" message="tns:IServicioValor_Enable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioValor/EnableResponse" message="tns:IServicioValor_Enable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Disable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioValor/Disable" message="tns:IServicioValor_Disable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioValor/DisableResponse" message="tns:IServicioValor_Disable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtainId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioValor/ObtainId" message="tns:IServicioValor_ObtainId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioValor/ObtainIdResponse" message="tns:IServicioValor_ObtainId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtainAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioValor/ObtainAll" message="tns:IServicioValor_ObtainAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioValor/ObtainAllResponse" message="tns:IServicioValor_ObtainAll_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioValor" type="tns:IServicioValor">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Save">
+      <soap:operation soapAction="http://tempuri.org/IServicioValor/Save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit">
+      <soap:operation soapAction="http://tempuri.org/IServicioValor/Edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Enable">
+      <soap:operation soapAction="http://tempuri.org/IServicioValor/Enable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disable">
+      <soap:operation soapAction="http://tempuri.org/IServicioValor/Disable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtainId">
+      <soap:operation soapAction="http://tempuri.org/IServicioValor/ObtainId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtainAll">
+      <soap:operation soapAction="http://tempuri.org/IServicioValor/ObtainAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioValor">
+    <wsdl:port name="BasicHttpBinding_IServicioValor" binding="tns:BasicHttpBinding_IServicioValor">
+      <soap:address location="http://localhost:7430/ServicioValor.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

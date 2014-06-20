@@ -16,7 +16,6 @@ namespace GP.MVP.Presenters
         {
             this._view = view;
             this._factorGestor = factorGestor;
-
         }
 
         public override void  Init()

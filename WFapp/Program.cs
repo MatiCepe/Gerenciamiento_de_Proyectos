@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WFapp
+namespace GP.WFapp
 {
     static class Program
     {
@@ -16,7 +13,7 @@ namespace WFapp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmValorListar());
+            Application.Run(new Main());
         }
     }
 }

@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-
 using GP.DTO.DTO;
 using GP.Gestores.Gestores;
 using GP.MVP.Presenters;
 using GP.MVP.Views;
 
-namespace WFapp
+namespace GP.WFapp
 {
     public partial class FrmFactorEditar : Form, IFactorEditarView
     {
         private readonly FactorEditarPresenter _presenter;
         private FactorDTO _factorDto;
+        private Main _main;
+
+        public FrmFactorEditar(int factorId, Main main) : this(factorId)
+        {
+            _main = main;
+        }
 
         public FrmFactorEditar(int factorId)
         {

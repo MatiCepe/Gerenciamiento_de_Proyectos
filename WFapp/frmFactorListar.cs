@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-
 using GP.DTO.DTO;
 using GP.Gestores.Gestores;
 using GP.MVP.Presenters;
 using GP.MVP.Views;
 
-namespace WFapp
+namespace GP.WFapp
 {
     public partial class FrmFactorListar : Form, IFactorListarView
     {
         private readonly FactorListarPresenter _presenter;
+        private Main _main;
+
+        public FrmFactorListar(Main main) : this()
+        {
+            _main = main;
+        }
 
         public FrmFactorListar()
         {
@@ -32,8 +37,10 @@ namespace WFapp
 
                 dgvFactores.DataSource = value;
 
-                dgvFactores.Columns["Deshabilitado"].Visible = false;
-                dgvFactores.Columns["ValoresSeleccionados"].Visible = false;
+                var gridViewColumn = dgvFactores.Columns["Deshabilitado"];
+                if (gridViewColumn != null) gridViewColumn.Visible = false;
+                var dataGridViewColumn = dgvFactores.Columns["ValoresSeleccionados"];
+                if (dataGridViewColumn != null) dataGridViewColumn.Visible = false;
             }
         }
 
@@ -80,6 +87,7 @@ namespace WFapp
         {
             var form = new FrmFactorEditar(this.FactorSeleccionado);
             form.Show();
+            this.Hide();
         }
 
         private void FrmFactorListar_Activated(object sender, EventArgs e)

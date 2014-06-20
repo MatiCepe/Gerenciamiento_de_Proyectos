@@ -4,19 +4,25 @@ using System.Linq;
 using System.Windows.Forms;
 using GP.DTO.DTO;
 using GP.MVP.Presenters;
+using GP.MVP.ServicioValor;
 using GP.MVP.Views;
-using GP.Gestores.Gestores;
 
-namespace WFapp
+namespace GP.WFapp
 {
     public partial class FrmValorListar : Form,IValorListarView
     {
         private readonly ValorListarPresenter _presenter;
         private int _idValor;
+        private Main _main;
+
+        public FrmValorListar(Main main) : this()
+        {
+            _main = main;
+        }
 
         public FrmValorListar()
         {
-            _presenter = new ValorListarPresenter(this, new ValorGestor());
+            _presenter = new ValorListarPresenter(this, new ServicioValorClient());
             InitializeComponent();
         }
 
@@ -40,7 +46,7 @@ namespace WFapp
             }
         }
 
-        public void ListarValores(IList<ValorDTO> valores)
+        public void ListarValores(IList<ValorDataContract> valores)
         {
             dataGridListaValores.DataSource = valores.ToList();
             dataGridListaValores.Columns["ValorId"].Visible = false;
@@ -55,7 +61,7 @@ namespace WFapp
             get { return _idValor; }
         }
 
-        public void MostrarValor(ValorDTO valor)
+        public void MostrarValor(ValorDataContract valor)
         {
             labelNombre.Text = valor.Nombre;
             labelInfluencia.Text = valor.Influencia.ToString();
@@ -63,29 +69,24 @@ namespace WFapp
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmValorEditar formValorEditar = new frmValorEditar(0,this);
+            var formValorEditar = new frmValorEditar(0, this);
             formValorEditar.MdiParent = this.ParentForm;
             formValorEditar.Show();
-            this.Enabled = false;
+            this.Hide();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            frmValorEditar formValorEditar = new frmValorEditar(_idValor, this);
+            var formValorEditar = new frmValorEditar(_idValor,this);
             formValorEditar.MdiParent = this.ParentForm;
             formValorEditar.Show();
-            this.Enabled = false;
+            this.Hide();
         }
 
         private void FrmValorListar_Load(object sender, EventArgs e)
         {
             _presenter.Init();
             this.dataGridListaValores.CellClick += OnCellSelected;
-        }
-
-        public void dataGridListaValoresRefresh()
-        {
-
         }
 
     }

@@ -11,7 +11,7 @@ namespace GP.MVP.Presenters
 {
     public class ValorEditarPresenter : BasePresenter<IValorEditarView>
     {
-        private ValorGestor _valorGestor;
+        private readonly ValorGestor _valorGestor;
         private readonly IValorEditarView _view;
         private int _valorId;
         private ValorDTO _valorDTO;

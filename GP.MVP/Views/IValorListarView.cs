@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GP.DTO.DTO;
+using GP.MVP.ServicioValor;
 
 namespace GP.MVP.Views
 {
@@ -12,7 +10,7 @@ namespace GP.MVP.Views
         event Action Seleccionar;
         IList<ValorDTO> Valores { get; }
         int ValorSeleccionado { get;  }
-        void ListarValores(IList<ValorDTO> valores);
-        void MostrarValor(ValorDTO valor);
+        void ListarValores(IList<ValorDataContract> valores);
+        void MostrarValor(ValorDataContract valor);
     }
 }
